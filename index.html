@@ -1,151 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d4fea8db5b.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Ricci</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/d4fea8db5b.js" crossorigin="anonymous"></script>
+  <title>Ricci</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><strong>RICCI</strong></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        <a class="nav-link" href="./pages/quienes-somos.html">Quienes somos</a>
-                        <a class="nav-link" href="./pages/productos.html">Productos</a>
-                        <a class="nav-link" href="./pages/contactos.html">Contacto</a>
-                    </div>
-                </div>
-            </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="./pages/productos.html">Productos</a></li>
+            <li><a href="./pages/quienes-somos.html">Quienes somos</a></li>
+            <li><a href="./pages/contacto.html">Contacto</a></li>
+            <li class="carrito">
+              <a href="#" id="icono-carrito">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cantidad-productos">0</span>
+              </a>
+              <div id="ventana-carrito" class="ventana-carrito">
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-productos">
+                </ul>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+              </div>
+            </li>
+          </ul>
         </nav>
-        <div class="header-content-container">
-            <div class="header-txt">
-                <h1>Ricci</h1>
-                <span>Estudio creativo</span>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem id consequatur iure, impedit
-                    aspernatur placeat.</p>
-                <a href="#" class="btn-1">Lorem ipsum</a>
-            </div>
-
-        </div>
-    </header>
-    <section class="bienvenido">
-        <div class="bienvenido-1"></div>
-        <div class="bienvenido-2">
-            <h2>Bienvenido a mi estudio creativo</h2>
-            <p class="b1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facilis magni distinctio
-                voluptas perspiciatis fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptatibus earum expedita
-                ratione nam.</p>
-        </div>
+      </header>
+  <main>
+    <section class="banner">
+      <img src="./img/RICCI-EC.png" alt="">
     </section>
-    <main>
-    <div class="productos-container">
-        <div class="product">
-            <img src="#" alt="">
-            <div class="productos-txt">
-                <h2>Producto0</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="precio">$280</p>
-                <button class="button">Ver</button>
-            </div>
+    <section class="contacto">
+        <div class="redes-sociales">
+          <ul>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="product">
-            <img src="#" alt="">
-            <div class="productos-txt">
-                <h2>Producto1</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="precio">$280</p>
-                <a href="" class="mercado-libre"> Ver</a>
-            </div>
+        <div class="caja-texto">
+          <h2>¿Tienes alguna pregunta?</h2>
+          <form>
+            <textarea id="pregunta" placeholder="Escribe tu pregunta aquí..."></textarea>
+            <button id="enviar-pregunta">Enviar </button>
+          </form>
         </div>
-        <div class="product">
-            <img src="#" alt="">
-            <div class="productos-txt">
-                <h2>Producto2</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="precio">$280</p>
-                <a href="" class="mercado-libre"> Ver</a>
-            </div>
+      </section>
+      <section id="CATCH">
+        <img src="./img/TRAMA-GIGANTE.png" alt="">
+        <div class="txt">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni laborum consequuntur aperiam, hic velit officia repudiandae saepe voluptatem suscipit eius.</p>
         </div>
-        <div class="product">
-            <img src="#" alt="">
-            <div class="productos-txt">
-                <h2>Producto3</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="precio">$280</p>
-                <a href="" class="mercado-libre"> Ver</a>
-            </div>
-        </div>
-        <div class="product">
-            <img src="#" alt="">
-            <div class="productos-txt">
-                <h2>Producto4</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="precio">$280</p>
-                <a href="" class="mercado-libre"> Ver</a>
-            </div>
-        </div>
-        <div class="product">
-            <img src="#" alt="">
-            <div class="productos-txt">
-                <h2>Producto5</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="precio">$280</p>
-                <a href="" class="mercado-libre"> Ver</a>
-            </div>
-        </div>
-        <div class="product">
-            <img src="#" alt="">
-            <div class="productos-txt">
-                <h2>Producto6</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="precio">$280</p>
-                <a href="" class="mercado-libre"> Ver</a>
-            </div>
-        </div>
-    </div>
-        
-    </main>
+      </section>
+  </main>
 
-    <script src="main.js"></script>
+  <script src="script.js"></script>
 </body>
-<footer>
-    <ul class="iconos">
-        <li>
-            <a href="https://www.whatsapp.com/?lang=es_LA"><i class="fa-brands fa-whatsapp"></i></a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a>
-        </li>
-        <li>
-            <a href="https://www.google.com/intl/es-419/gmail/about/"><i
-                    class="fa-duotone fa-solid fa-envelope"></i></a>
-        </li>
-    </ul>
-    <ul class="menu">
-        <li>
-            <a href="index.html">Inicio</a>
-            <a href="./pages/productos.html">Productos</a>
-            <a href="./pages/quienes-somos.html">Quienes somos</a>
-            <a href="./pages/contactos.html">Contacto</a>
-    </ul>
-    <p>Created with love by @ariadnitah</p>
-</footer>
 </html>

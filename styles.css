@@ -1,172 +1,187 @@
-/*!--- INDEX---*/
-*{
+/** INDEX **/
+body {
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: bold;
+}
+
+header {
+    background-color: #FF9933;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
-.header-content-container{
-    background-image: url(Ricci-banner.png);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+
+nav li {
+    margin-right: 20px;
 }
-.product {
-    padding: 50px 0;
-    text-align: center;
-}
-.product h2{
-    color: #111111;
-    font-family: "Osvald", sans-serif ;
-    font-size: 50px;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-}
-.productos-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-.product{
-    text-align: center;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-.product img{
-    width: 250px;
-    height: 370px;
-    margin-bottom: 20px;
-}
-product h2{
-    font-size: 20px;
-    color: #111111;
-    font-family: "Osvald", sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-.button{
-    position: relative;
-    padding: 10px 20px;
-    background-color: #f79236;
-    border-radius: 6px;
+
+nav a {
     color: #fff;
-    border: none;
-    font-size: 18px;
-    font-weight: 400;
+    text-decoration: none;
+   font-size: 25px;
+}
+
+.carrito {
+    position: relative;
+}
+
+#icono-carrito {
+    font-size: 24px;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) ;
 }
-.button:active{
-    transform: scale(0.96);
-}
-.button::before,
-.button::after{
-    content: "";
+
+#cantidad-productos {
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff0000;
+    padding: 2px 5px;
+    border-radius: 50%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 150%;
-    border: 2px solid red ;
+    top: -5px;
+    right: -5px;
+}
+
+.ventana-carrito {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.ventana-carrito h2 {
+    margin-top: 0;
+}
+
+#lista-productos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-productos li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#vaciar-carrito {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#vaciar-carrito:hover {
+    background-color: #3e8e41;
+}
+
+#enviar-pedido {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#enviar-pedido:hover {
+    background-color: #3e8e41;
+}
+.banner{
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.button::before{
-    top: -70%;
-    background-image: radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, #f79236 20%, transparent 30%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #f79236 15%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%);
-    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 18% 18%;
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-    animation: topBubbles 0.6s ease-in-out infinite;
+.contacto {
+    background-image: url(./img/ricci-materializamos.png);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+    padding: 20px;
 }
-@keyframes  topBubbles {
-    50%{
-        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-    }
-    100%{
-        background-size: 15% 15%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 18% 18%;
-    background-position: 10% 0%, 30% 90%, 10% 90%, 15% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-    }
-}
-.button::after{
-    top: -70%;
-    background-image: radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #f79236 15%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%),
-    radial-gradient(circle, #f79236 20%, transparent 20%);
-}
-/*!--- PRODUCTOS---*/
-/*!--- QUIENES SOMOS---*/
-/*!--- CONTACTO ---*/
-/*!--- FOOTER ---*/
-footer {
-    position: relative;
+
+.redes-sociales {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    background: #CA8787;
-    height: 200px;
-    padding: 20px 50px;
-    flex-direction: column;
 }
 
-footer .iconos,
-footer .menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}
-
-footer .iconos li,
-footer .menu li {
+.redes-sociales ul {
     list-style: none;
+    padding: 250;
+    margin: 0;
+    display: flex;
 }
 
-footer .iconos li a {
-    font-size: 2em;
-    color: white;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
+.redes-sociales li {
+    margin-right: 20px;
 }
 
-footer .iconos li a:hover {
-    transform: translateY(-10px);
+.redes-sociales a {
+    color: #FF99CC;
+    padding: 25px;
+    font-size: 35px;
+    display: block;
 }
 
-footer .menu li a {
-    font-size: 1.2em;
-    color: white;
-    margin: 0 10px;
-    display: inline-block;
-    text-decoration: none;
-    opacity: 0.75;
-    transition: 0.5s;
+.caja-texto {
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer .menu li a:hover {
-    opacity: 1;
+.caja-texto h2 {
+    margin-top: 0;
+    color: #FF9933;
 }
 
-footer p {
-    color: white;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    opacity: 0.75;
+.caja-texto textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
 }
+
+.caja-texto button {
+    background-color:  #e762a4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.caja-texto button:hover {
+    background-color: #FF99CC;
+}
+.CATCH{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.txt{
+    background-color: #FFFFFF;
+
+}
+
+/** PRODUCTOS **/
+/** QUIENES SOMOS**/
+/** CONTACTO**/
+/** CARRITO DE COMPRAS **/
